@@ -33,28 +33,49 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
         }))
     }
 
-    async function handleSubmit(e: React.FormEvent) {
-        e.preventDefault()
-
-        console.log(formData)
-
-        // await axios
-        //     .post(
-        //         "/api/rsvp",
-        //         JSON.stringify(formData),
-        //         { headers: { "Content-Type": "application/json" } }
-        //     )
-        //     .then((response) => {
-        //         console.log("Success")
-        //         if (onClose) onClose()
-        //     })
-        //     .catch((error) => {
-        //         console.log("Error creating page: " + error.message)
-        //     })
-
-        console.log(formData)
-        if (onClose) onClose()
-    }
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+      
+        const payload = {
+          name: formData.name,
+          phoneNumber: formData.phoneNumber,
+          numberOfGuests: formData.numberOfGuests,
+          attendingHuppaCocktail: formData.attendingHuppaCocktail, // "yes" | "no"
+          attendingCelebration: formData.attendingCelebration,     // "yes" | "no"
+        };
+      
+        try {
+          const res = await fetch("/api/rsvp", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(payload),
+          });
+      
+          if (!res.ok) {
+            const data = await res.json().catch(() => ({}));
+            alert(`Error: ${data.error || "Failed to submit"}`);
+            return;
+          }
+      
+          alert("RSVP submitted! Thank you ❤️");
+      
+          // Optional: clear and/or close form
+          setFormData({
+            name: "",
+            phoneNumber: "",
+            numberOfGuests: 1,
+            attendingHuppaCocktail: "yes",
+            attendingCelebration: "yes",
+          });
+      
+          if (onClose) onClose();
+        } catch (err) {
+          console.error(err);
+          alert("Network error. Please try again.");
+        }
+      };
 
     return (
         <div className="rsvp_form_container" onClick={onClose}>
