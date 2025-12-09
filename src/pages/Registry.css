@@ -1,0 +1,15 @@
+.section_details.reverse {
+    display: flex;
+    background: #6a1745;
+    color: #e4d4dc;
+}
+
+.section_details.reverse .section_content {
+    flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 700px) {
+    .section_details.reverse .section_content {
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,75 @@
+.App {
+    text-align: center;
+    width: 100%;
+}
+
+#main_nav {
+    background-color: hsla(105, 64%, 25%, 0.4);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(10px);
+    height: 100px;
+    color: white;
+    z-index: 10;
+}
+
+#main_nav > div {
+    position: absolute;
+    display: flex;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 10px;
+    gap: 10px;
+}
+
+#main_nav .left {
+    position: absolute;
+}
+
+#main_nav .right {
+    display: flex;
+    position: absolute;
+    align-items: flex-end;
+    right: 0;
+}
+
+#main_nav a {
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 20px 30px;
+}
+
+.home_link {
+    font-family: "Great Vibes", cursive;
+    font-size: 45px;
+    font-weight: 400;
+    transform: translateY(2px);
+}
+
+#main_nav .right a {
+    font-size: 20px;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 700px) {
+    #main_nav {
+        height: 100px;
+    }
+
+    #main_nav .left {
+        padding-left: 0 !important;
+    }
+
+    .home_link {
+        font-size: 35px;
+        padding-left: 15px !important;
+    }
+
+    #main_nav .right {
+        visibility: hidden;
+    }
+}

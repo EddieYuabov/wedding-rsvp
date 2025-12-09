@@ -1,0 +1,113 @@
+#home {
+    position: relative;
+}
+
+.section_top {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+}
+
+.background_main {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+.title_text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    color: white;
+    width: 100%;
+    height: 50%;
+}
+
+.title_text h1 {
+    font-size: 8em;
+    font-family: "Great Vibes", cursive;
+    font-weight: 500;
+    margin: 1rem;
+    text-shadow: rgba(0, 0, 0, 1) 0px 3px 8px;
+}
+
+.title_text h2 {
+    font-size: 3em;
+    font-family: "Cinzel Decorative", serif;
+    font-weight: 500;
+    margin: 0;
+    text-shadow: rgba(0, 0, 0, 1) 0px 2px 6px;
+}
+
+.section_details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(0, 0%, 100%, 0.3);
+    text-align: left;
+    color: hsla(105, 64%, 25%, 1);
+}
+
+.section_content {
+    padding: 30px;
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    column-gap: 30px;
+}
+
+.section_content .text_content {
+    flex: 1;
+}
+
+.section_details h1 {
+    font-size: 60px;
+    font-family: "Parisienne", cursive;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.section_details p {
+    margin: 0;
+    margin-bottom: 1rem;
+    font-size: 1.5em;
+    font-weight: 500;
+    font-family: "Cinzel Decorative", serif;
+}
+
+.section_details img {
+    height: fit-content;
+    max-width: min(700px, 100%);
+    max-height: 650px;
+    object-fit: cover;
+    object-position: top;
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 2px 10px;
+}
+
+@media screen and (max-width: 700px) {
+    .section_top {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+    }
+
+    .section_content {
+        flex-direction: column;
+    }
+
+    .section_content h1 {
+        font-size: 45px;
+        margin-bottom: 10px;
+    }
+    .section_content p {
+        font-size: 20px;
+    }
+}
