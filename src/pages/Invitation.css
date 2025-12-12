@@ -308,10 +308,10 @@
     border-color: hsla(105, 64%, 35%, 1);
 } */
 
-.rsvp_button:active {
+/* .rsvp_button:active {
     transform: translateY(0);
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.4);
-}
+} */
 
 @media screen and (max-width: 700px) {
     .section_invitation {
