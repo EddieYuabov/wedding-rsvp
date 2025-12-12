@@ -1,11 +1,16 @@
 #home {
     position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .section_top {
     position: relative;
     width: 100%;
+    max-width: 100vw;
     height: 90vh;
+    overflow-x: hidden;
 }
 
 .background_main {
@@ -53,6 +58,9 @@
     background-color: hsla(0, 0%, 100%, 0.3);
     text-align: left;
     color: hsla(105, 64%, 25%, 1);
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 .section_content {

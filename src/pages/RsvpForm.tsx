@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import axios from "axios"
 import "./RsvpForm.css"
 
@@ -8,6 +8,7 @@ interface RsvpFormData {
     numberOfGuests: number
     attendingHuppaCocktail: string
     attendingCelebration: string
+    additionalInformation: string
 }
 
 interface RsvpFormProps {
@@ -21,7 +22,15 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
         numberOfGuests: 1,
         attendingHuppaCocktail: "yes",
         attendingCelebration: "yes",
+        additionalInformation: "",
     })
+
+    useEffect(() => {
+        // Scroll to top when form opens
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+        document.documentElement.scrollTop = 0
+        document.body.scrollTop = 0
+    }, [])
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -40,12 +49,13 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
           name: formData.name,
           phoneNumber: formData.phoneNumber,
           numberOfGuests: formData.numberOfGuests,
-          attendingHuppaCocktail: formData.attendingHuppaCocktail, // "yes" | "no"
-          attendingCelebration: formData.attendingCelebration,     // "yes" | "no"
+          attendingHuppaCocktail: formData.attendingHuppaCocktail,
+          attendingCelebration: formData.attendingCelebration,
+          additionalInformation: formData.additionalInformation,
         };
       
         try {
-          const res = await fetch("/api/rsvp", {
+          const res = await fetch("http://localhost:3002/api/rsvp", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -68,6 +78,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
             numberOfGuests: 1,
             attendingHuppaCocktail: "yes",
             attendingCelebration: "yes",
+            additionalInformation: "",
           });
       
           if (onClose) onClose();
@@ -175,6 +186,16 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
                             </label>
                         </div>
                     </div>
+
+                    <label htmlFor="additionalInformation">Additional information:</label>
+                    <textarea
+                        id="additionalInformation"
+                        name="additionalInformation"
+                        value={formData.additionalInformation}
+                        onChange={handleChange}
+                        rows={4}
+                        placeholder="Any additional information you'd like to share..."
+                    />
 
                     <button type="submit">Submit</button>
                 </form>
