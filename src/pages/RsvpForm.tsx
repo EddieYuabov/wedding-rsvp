@@ -185,17 +185,16 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
                         </div>
                     </div>
 
-                    <label htmlFor="additionalInformation">Additional information:</label>
+                    <label htmlFor="additionalInformation">Name of Guests:</label>
                     <textarea
                         id="additionalInformation"
                         name="additionalInformation"
                         value={formData.additionalInformation}
                         onChange={handleChange}
                         rows={4}
-                        placeholder="Any additional information you'd like to share..."
                     />
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" className="submit_button">Submit</button>
                 </form>
             </div>
         </div>
