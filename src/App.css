@@ -19,7 +19,7 @@
     height: 100px;
     color: white;
     z-index: 10;
-    animation: navDropDown 0.9s ease-out 0.5s forwards;
+    animation: navDropDown 0.6s ease-out 0.4s forwards;
 }
 
 @keyframes navDropDown {
@@ -73,7 +73,7 @@
 
 @media screen and (max-width: 700px) {
     #main_nav {
-        height: 100px;
+        height: 80px;
     }
 
     #main_nav .left {
