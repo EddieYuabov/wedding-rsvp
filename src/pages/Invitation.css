@@ -324,11 +324,11 @@
      }
 
     .rsvp_button_container {
-        padding: 50px 15px 20px 15px;
+        padding: 50px 15px 30px 15px;
     }
 
     .rsvp_button {
-        padding: 10px 90px;
+        padding: 10px 100px;
         font-size: 22px;
         letter-spacing: 1.5px;
     }
