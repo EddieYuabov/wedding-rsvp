@@ -24,9 +24,9 @@ const Home = () => {
                         <p>505 Franklin Ave, Franklin Square, NY 11010</p>
                         <br/>
                         <p>Monday, March 9th, 2026</p>
-                        <p>5:30 PM - Ceremony</p>
-                        <p>7:00 PM - Cocktail Hour</p>
-                        <p>8:30 PM - Party! 🕺 💃</p>
+                        <p>Ceremony - 6:00 PM Sharp </p>
+                        <p>Cocktail Hour - 7:00 PM</p>
+                        <p>Party! 🕺 💃 - 8:30 PM</p>
                     </div>
                     <img src="./images/sands_castle.jpg" className="venue_image"/>
                 </div>
