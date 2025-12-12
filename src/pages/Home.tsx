@@ -8,7 +8,7 @@ const Home = () => {
     return (
         <div id="home">
             <div className="section_top">
-                <img src="./images/edward_and_dina.jpg" className="background_main" />
+                <img src="./images/eddie_dina_ring.jpg" className="background_main" />
                 <div className="title_text">
                     {/* <h1>Ofer & Bella</h1> */}
                     {/* <h1><br/></h1> */}

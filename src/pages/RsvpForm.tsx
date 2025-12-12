@@ -55,23 +55,21 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
         };
       
         try {
-          const res = await fetch("http://localhost:3002/api/rsvp", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
+            const res = await fetch("/api/rsvp", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload),
+              });
+              
       
-          if (!res.ok) {
-            const data = await res.json().catch(() => ({}));
-            alert(`Error: ${data.error || "Failed to submit"}`);
-            return;
-          }
+            if (!res.ok) {
+                const data = await res.json().catch(() => ({}));
+                alert(`Error: ${data.error || "Failed to submit"}`);
+                return;
+            }
       
           alert("RSVP submitted! Thank you ❤️");
-      
-          // Optional: clear and/or close form
+    
           setFormData({
             name: "",
             phoneNumber: "",

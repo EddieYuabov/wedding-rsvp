@@ -19,6 +19,15 @@
     max-height: 60vh;
     width: 100%;
     height: 100%;
+    opacity: 0;
+    transform: translateY(50px) scale(0.95);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+    will-change: opacity, transform;
+}
+
+.envelope_wrapper.inView {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .envelope_wrapper * {
@@ -129,7 +138,6 @@
     left: 50%;
     transform: translateX(-50%) rotate(-90deg);
     z-index: 3;
-    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.6);
 }
 
 .envelope_wrapper.isActive {
@@ -316,11 +324,11 @@
      }
 
     .rsvp_button_container {
-        padding: 80px 15px 30px 15px;
+        padding: 50px 15px 20px 15px;
     }
 
     .rsvp_button {
-        padding: 15px 40px;
+        padding: 10px 90px;
         font-size: 22px;
         letter-spacing: 1.5px;
     }
