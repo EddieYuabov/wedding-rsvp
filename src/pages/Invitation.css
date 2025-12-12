@@ -283,10 +283,11 @@
     font-weight: 600;
     color: white;
     background: linear-gradient(
-        135deg,
-        hsla(105, 64%, 25%, 1) 0%,
-        hsla(105, 59%, 35%, 1) 100%
+        140deg,
+        rgb(49, 118, 26) 0%,
+        hsla(105, 59%, 14%, 1) 100%
     );
+    /* hsla(105, 59%, 14%, 0.9) */
     border: 2px solid hsla(105, 64%, 30%, 1);
     border-radius: 10px;
     cursor: pointer;
