@@ -118,4 +118,7 @@
     .section_content p {
         font-size: 20px;
     }
+    .section_details img {
+        margin-top: 50px;
+    }
 }
