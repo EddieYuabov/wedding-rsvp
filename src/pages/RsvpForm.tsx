@@ -133,8 +133,8 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
                         ))}
                     </select>
 
-                    <div className="radio_group">
-                        <label>Attending huppa & cocktail:</label>
+                    {/* <div className="radio_group">
+                        <label>Attending Chuppah & Cocktail:</label>
                         <div className="radio_options">
                             <label>
                                 <input
@@ -157,7 +157,7 @@ const RsvpForm: React.FC<RsvpFormProps> = ({ onClose }) => {
                                 No
                             </label>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="radio_group">
                         <label>Attending party:</label>

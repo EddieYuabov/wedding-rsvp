@@ -10,9 +10,6 @@ const Home = () => {
             <div className="section_top">
                 <img src="./images/eddie_dina_ring.jpg" className="background_main" />
                 <div className="title_text">
-                    {/* <h1>Ofer & Bella</h1> */}
-                    {/* <h1><br/></h1> */}
-                    {/* <h2>We're getting married!</h2> */}
                 </div>
             </div>
             <Invitation />
@@ -24,9 +21,9 @@ const Home = () => {
                         <p>505 Franklin Ave, Franklin Square, NY 11010</p>
                         <br/>
                         <p>Monday, March 9th, 2026</p>
-                        <p>Ceremony - 6:00 PM Sharp </p>
-                        <p>Cocktail Hour - 7:00 PM</p>
-                        <p>Party! 🕺 💃 - 8:30 PM</p>
+                        <p>Chuppah Ceremony - <b>6PM Sharp</b></p>
+                        <p>Cocktail Hour - <b>7PM</b></p>
+                        <p>Party! 🕺 💃 - <b>8:30 PM</b></p>
                     </div>
                     <img src="./images/sands_castle.jpg" className="venue_image"/>
                 </div>
